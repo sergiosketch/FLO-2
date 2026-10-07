@@ -1,30 +1,20 @@
-// Replace this URL when the final Google Form is ready.
-const WAITLIST_URL = "https://forms.google.com/";
+const WAITLIST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd46xMNUl24eneWQD7mHaOeVypTG3iFNl2sf6CvDNopho0LCQ/viewform?usp=publish-editor";
+document.querySelectorAll(".js-waitlist").forEach(a => a.href = WAITLIST_URL);
 
-document.querySelectorAll(".js-waitlist").forEach((link) => {
-  link.href = WAITLIST_URL;
-});
-
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const parallaxItems = [...document.querySelectorAll(".parallax")];
-
-if (!reduceMotion && window.matchMedia("(pointer:fine)").matches) {
-  window.addEventListener("pointermove", (event) => {
-    const x = event.clientX / window.innerWidth - 0.5;
-    const y = event.clientY / window.innerHeight - 0.5;
-
-    parallaxItems.forEach((item) => {
-      const depth = Number(item.dataset.depth || 0.02);
-      item.style.transform =
-        `translate3d(${x * depth * 900}px, ${y * depth * 700}px, 0)`;
-    });
-  }, { passive: true });
-
-  document.querySelector(".hero")?.addEventListener("pointerleave", () => {
-    parallaxItems.forEach((item) => {
-      item.style.transition = "transform .7s cubic-bezier(.2,.7,.2,1)";
-      item.style.transform = "translate3d(0,0,0)";
-      setTimeout(() => item.style.transition = "", 700);
-    });
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
   });
+}, {threshold:.14});
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches && matchMedia("(pointer:fine)").matches) {
+  const items = document.querySelectorAll(".parallax");
+  addEventListener("pointermove", e => {
+    const x=e.clientX/innerWidth-.5, y=e.clientY/innerHeight-.5;
+    items.forEach(el => {
+      const d=Number(el.dataset.depth||.02);
+      el.style.transform=`translate3d(${x*d*650}px,${y*d*450}px,0) scale(1.02)`;
+    });
+  }, {passive:true});
 }

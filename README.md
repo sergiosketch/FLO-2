@@ -1,29 +1,26 @@
-# FLŌ — Landing Page / Hero V2
+# FLŌ Landing Page — V3
 
-Primera versión del Hero interactivo para FLŌ.
+Landing page completa de pre-lanzamiento para FLŌ.
 
-## Publicar en GitHub / Netlify
-1. Descomprime el ZIP.
-2. Sube **el contenido de esta carpeta** a la raíz del repositorio.
-3. `index.html` debe quedar en la raíz.
-4. Haz commit a `main`.
-5. Netlify detectará el cambio y publicará la nueva versión.
+## Secciones
+1. Hero — “Mismo ciclo. Más posibilidades.”
+2. Conoce FLŌ + beneficios
+3. Ingredientes
+4. FLŌ se adapta a tu ritmo
+5. Comunidad + CTA final
+6. Footer
 
-## Waiting list
-En `assets/main.js` reemplaza:
+## Google Form
+Todos los botones `Quiero ser parte` ya apuntan al formulario:
+https://docs.google.com/forms/d/e/1FAIpQLSd46xMNUl24eneWQD7mHaOeVypTG3iFNl2sf6CvDNopho0LCQ/viewform?usp=publish-editor
 
-`https://forms.google.com/`
+## Publicación
+Descomprime el ZIP y sube **el contenido** a la raíz del repositorio GitHub.
+`index.html` debe quedar en la raíz. Haz commit a `main`; Netlify desplegará la actualización.
 
-por la URL final del Google Form.
+## Imágenes
+Las imágenes incluidas fueron preparadas a partir de la dirección visual V3 aprobada.
+Están separadas del HTML para poder reemplazarlas fácilmente más adelante.
 
-## Visual
-`assets/images/flo-hero-reference.png` es el visual conceptual actual del Hero.
-Los textos y botones están construidos en HTML, no incrustados en la imagen.
-
-## Archivos
-- `index.html`
-- `assets/styles.css`
-- `assets/main.js`
-- `assets/images/flo-hero-reference.png`
-
-La sección posterior al Hero es un placeholder preparado para continuar desarrollando la landing.
+## Nota de contenido
+Los textos se mantienen en territorio de bienestar/acompañamiento y evitan presentar FLŌ como tratamiento médico.
