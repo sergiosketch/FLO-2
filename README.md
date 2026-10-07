@@ -1,26 +1,26 @@
-# FLŌ Landing Page — V3
+# FLŌ Landing Page — V4
 
-Landing page completa de pre-lanzamiento para FLŌ.
+Versión 4 basada en la última dirección visual aprobada.
 
-## Secciones
-1. Hero — “Mismo ciclo. Más posibilidades.”
-2. Conoce FLŌ + beneficios
-3. Ingredientes
-4. FLŌ se adapta a tu ritmo
-5. Comunidad + CTA final
-6. Footer
+## Mejoras V4
+- Textos alineados mediante grids consistentes.
+- Imágenes independientes por sección.
+- Imágenes de uso sin texto incrustado; todo el copy vive en HTML.
+- Assets separados para guaraná, frutos rojos, magnesio y vitamina B6.
+- Hero con visual de producto, agua, hojas y frutos.
+- Banner final sin texto incrustado.
+- Animaciones de entrada para imágenes, contenido y logo.
+- Microanimaciones hover y parallax en desktop.
+- Iconografía complementaria construida en HTML/CSS.
+- Responsive desktop/tablet/mobile.
+- CTA conectado al Google Form.
 
-## Google Form
-Todos los botones `Quiero ser parte` ya apuntan al formulario:
+## CTA
 https://docs.google.com/forms/d/e/1FAIpQLSd46xMNUl24eneWQD7mHaOeVypTG3iFNl2sf6CvDNopho0LCQ/viewform?usp=publish-editor
 
-## Publicación
-Descomprime el ZIP y sube **el contenido** a la raíz del repositorio GitHub.
-`index.html` debe quedar en la raíz. Haz commit a `main`; Netlify desplegará la actualización.
+## Reemplazo en GitHub
+Sube el contenido de esta carpeta a la raíz del repositorio y reemplaza `index.html`, `README.md` y `assets/`.
+Haz commit en `main`; Netlify desplegará la actualización.
 
-## Imágenes
-Las imágenes incluidas fueron preparadas a partir de la dirección visual V3 aprobada.
-Están separadas del HTML para poder reemplazarlas fácilmente más adelante.
-
-## Nota de contenido
-Los textos se mantienen en territorio de bienestar/acompañamiento y evitan presentar FLŌ como tratamiento médico.
+## Assets
+Las imágenes están en `assets/images/` y pueden sustituirse individualmente conservando los mismos nombres.
